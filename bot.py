@@ -17,15 +17,15 @@ async def on_ready():
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.watching,
-            name=f"{len(bot.guilds)} servers 🛡️"
+            name=f"{len(bot.guilds)} servers"
         )
     )
-    print(f"✅ Bot is online as {bot.user}")
+    print(f"Bot is online as {bot.user}")
 
 async def load_cogs():
     for cog in ["moderation", "protection", "tickets", "giveaways"]:
-       await bot.load_extension(cog)
-        print(f"  ✅ Loaded: {cog}")
+        await bot.load_extension(cog)
+        print(f"Loaded: {cog}")
 
 @bot.event
 async def setup_hook():
