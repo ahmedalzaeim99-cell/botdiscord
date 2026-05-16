@@ -24,7 +24,7 @@ async def on_ready():
 
 async def load_cogs():
     for cog in ["moderation", "protection", "tickets", "giveaways"]:
-        await bot.load_extension(f"cogs.{cog}")
+       await bot.load_extension(cog)
         print(f"  ✅ Loaded: {cog}")
 
 @bot.event
